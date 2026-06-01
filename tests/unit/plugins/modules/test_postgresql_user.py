@@ -12,10 +12,10 @@ import sys
 import pytest
 
 if sys.version_info[0] == 3:
-    import plugins.modules.postgresql_user as postgresql_user
+    from plugins.modules import postgresql_user
     from plugins.modules.postgresql_user import parse_user_configuration, compare_user_configurations, _pg_quote_user
 elif sys.version_info[0] == 2:
-    import ansible_collections.community.postgresql.plugins.modules.postgresql_user as postgresql_user
+    from ansible_collections.community.postgresql.plugins.modules import postgresql_user
     from ansible_collections.community.postgresql.plugins.modules.postgresql_user import parse_user_configuration, \
         compare_user_configurations, _pg_quote_user
 
